@@ -12,20 +12,24 @@ namespace Yelo.DataModel
     using System;
     using System.Collections.Generic;
     
-    public partial class Company
+    public partial class Gift
     {
-        public int CompanyId { get; set; }
-        public string CompanyName { get; set; }
-        public string CompanyAddress { get; set; }
+        public int GiftId { get; set; }
+        public Nullable<int> CompanyId { get; set; }
+        public string GiftName { get; set; }
         public int CityId { get; set; }
-        public string Description { get; set; }
         public string VideoURL { get; set; }
         public string ImageURL { get; set; }
-        public Nullable<int> Rating { get; set; }
-        public Nullable<System.DateTime> DateCreate { get; set; }
+        public Nullable<int> Claims { get; set; }
+        public Nullable<int> Quantity { get; set; }
+        public Nullable<int> Price { get; set; }
+        public Nullable<bool> IsSpecial { get; set; }
+        public string Description { get; set; }
+        public Nullable<System.DateTime> CreatedDate { get; set; }
+        public Nullable<System.DateTime> ValidityDate { get; set; }
         public Nullable<bool> IsArchived { get; set; }
     
         public virtual City City { get; set; }
-        public virtual Gift Gift { get; set; }
+        public virtual Company Company { get; set; }
     }
 }

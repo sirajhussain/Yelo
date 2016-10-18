@@ -12,13 +12,12 @@ namespace Yelo.DataModel
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class City
     {
-        public int UserId { get; set; }
-        public string UserName { get; set; }
-        public string PhoneNumber { get; set; }
-        public Nullable<int> Rating { get; set; }
-        public Nullable<System.DateTime> DateCreated { get; set; }
-        public Nullable<bool> IsArchived { get; set; }
+        public int CityId { get; set; }
+        public string CityName { get; set; }
+    
+        public virtual Company Company { get; set; }
+        public virtual Gift Gift { get; set; }
     }
 }

@@ -12,13 +12,12 @@ namespace Yelo.DataModel
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class sysdiagram
     {
-        public int UserId { get; set; }
-        public string UserName { get; set; }
-        public string PhoneNumber { get; set; }
-        public Nullable<int> Rating { get; set; }
-        public Nullable<System.DateTime> DateCreated { get; set; }
-        public Nullable<bool> IsArchived { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

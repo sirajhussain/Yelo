@@ -189,6 +189,26 @@ namespace Yelo.DataModel.GenericRepository
             return DbSet.First<TEntity>(predicate);
         }
 
+        public IEnumerable<T> ExecWithStoreProcedure<T>(string query, params object[] parameters)
+        {
+            return Context.Database.SqlQuery<T>(query, parameters);
+        }
+        
+        /// <summary>
+        /// How to use this:
+        /// IEnumerable<Products> products = 
+        ///  _unitOfWork.ProductRepository.ExecWithStoreProcedure(
+        ///  "exe spGetProducts @bigCategoryId",
+        ///  new SqlParameter("bigCategoryId", SqlDbType.BigInt) { Value = categoryId } 
+        /// );
+        /// </summary>
+        /// <param name="query"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        public IEnumerable<TEntity> ExecWithStoreProcedure(string query, params object[] parameters)
+        {
+            return Context.Database.SqlQuery<TEntity>(query, parameters);
+        }
 
         #endregion
     } 

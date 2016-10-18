@@ -10,9 +10,8 @@
 namespace Yelo.DataModel
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class User
+    public partial class GetAllUsers_sp_Result
     {
         public int UserId { get; set; }
         public string UserName { get; set; }

@@ -4,11 +4,20 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="618c5e5829b64b4eba978f6336a16d74" Name="Diagram1">
-        <EntityTypeShape EntityType="YeloDbModel.Company" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="YeloDbModel.Product" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="YeloDbModel.Token" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="YeloDbModel.User" Width="1.5" PointX="2.5" PointY="3.875" />
+      <Diagram DiagramId="618c5e5829b64b4eba978f6336a16d74" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="YeloDbModel.City" Width="1.5" PointX="6.5" PointY="1.5" />
+        <EntityTypeShape EntityType="YeloDbModel.Company" Width="1.5" PointX="10.375" PointY="5.75" />
+        <EntityTypeShape EntityType="YeloDbModel.Gift" Width="1.5" PointX="10.154564972107561" PointY="0.26447619510091663" />
+        <EntityTypeShape EntityType="YeloDbModel.LotteryDate" Width="1.5" PointX="3" PointY="9.625" />
+        <EntityTypeShape EntityType="YeloDbModel.Rule" Width="1.5" PointX="5.125" PointY="11.625" />
+        <EntityTypeShape EntityType="YeloDbModel.sysdiagram" Width="1.5" PointX="0.625" PointY="9.25" />
+        <EntityTypeShape EntityType="YeloDbModel.Token" Width="1.5" PointX="4.75" PointY="9.5" />
+        <EntityTypeShape EntityType="YeloDbModel.UserGiftsClaimLog" Width="1.75" PointX="7.375" PointY="10.25" />
+        <EntityTypeShape EntityType="YeloDbModel.User" Width="1.5" PointX="13.875" PointY="5.125" />
+        <EntityTypeShape EntityType="YeloDbModel.UserWonGiftsLog" Width="2" PointX="18.5" PointY="3.125" />
+        <AssociationConnector Association="YeloDbModel.FK_Companies_Cities" />
+        <AssociationConnector Association="YeloDbModel.FK_Gifts_Cities" />
+        <AssociationConnector Association="YeloDbModel.FK_Gifts_Companies" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

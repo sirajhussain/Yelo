@@ -18,8 +18,9 @@ namespace Yelo.DataModel.UnitOfWork
         #region Private member variables...
         private YeloApiDbEntities _context = null;
         private GenericRepository<User> _userRepository;
-        private GenericRepository<Product> _productRepository;
+        private GenericRepository<Gift> _giftRepository;
         private GenericRepository<Token> _tokenRepository;
+        private GenericRepository<City> _cityRepository;
         #endregion
 
         public UnitOfWork()
@@ -29,15 +30,15 @@ namespace Yelo.DataModel.UnitOfWork
 
         #region Public Repository Creation properties...
         /// <summary>  
-        /// Get/Set Property for product repository.  
+        /// Get/Set Property for Gift repository.  
         /// </summary>  
-        public GenericRepository<Product> ProductRepository
+        public GenericRepository<Gift> GiftRepository
         {
             get
             {
-                if (this._productRepository == null)
-                    this._productRepository = new GenericRepository<Product>(_context);
-                return _productRepository;
+                if (this._giftRepository == null)
+                    this._giftRepository = new GenericRepository<Gift>(_context);
+                return _giftRepository;
             }
         }
 
@@ -64,6 +65,16 @@ namespace Yelo.DataModel.UnitOfWork
                 if (this._tokenRepository == null)
                     this._tokenRepository = new GenericRepository<Token>(_context);
                 return _tokenRepository;
+            }
+        }
+
+        public GenericRepository<City> CityRepository
+        {
+            get
+            {
+                if (this._cityRepository == null)
+                    this._cityRepository = new GenericRepository<City>(_context);
+                return _cityRepository;
             }
         }
         #endregion
